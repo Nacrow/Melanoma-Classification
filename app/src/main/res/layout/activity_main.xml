@@ -9,27 +9,25 @@
     android:paddingRight="@dimen/activity_horizontal_margin"
     android:paddingTop="@dimen/activity_vertical_margin"
     tools:context="com.amitshekhar.tflite.MainActivity">
-
-    <com.wonderkiln.camerakit.CameraView
-        android:id="@+id/cameraView"
-        android:layout_width="300dp"
-        android:layout_height="300dp"
-        android:layout_gravity="center|top" />
-
-
     <LinearLayout
         android:layout_width="match_parent"
-        android:layout_height="80dp"
-        android:layout_gravity="center|top"
-        android:layout_marginTop="300dp"
-        android:gravity="center"
-        android:orientation="horizontal">
+        android:layout_height="match_parent"
+        android:orientation="vertical">
 
+        <com.wonderkiln.camerakit.CameraView
+            android:id="@+id/cameraView"
+            android:layout_width="300dp"
+            android:layout_height="380dp"
+            android:layout_gravity="center|top" />
+        <TableRow
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content">
         <ImageView
             android:id="@+id/imageViewResult"
-            android:layout_width="75dp"
-            android:layout_height="75dp"
-            android:padding="2dp" />
+            android:layout_width="100dp"
+            android:layout_height="100dp"
+            android:padding="2dp"
+           />
 
         <TextView
             android:id="@+id/textViewResult"
@@ -40,28 +38,35 @@
             android:maxLines="15"
             android:scrollbars="vertical"
             android:textColor="@android:color/black" />
-
-    </LinearLayout>
-
-
+        </TableRow>
+        <Button
+            android:id="@+id/btnDetectObject"
+            android:layout_width="match_parent"
+            android:layout_weight="1"
+            android:layout_height="48dp"
+            android:layout_gravity="bottom"
+            android:text="Take the Picture"
+            android:textAllCaps="false"
+            android:textColor="@android:color/black"
+            android:visibility="visible" />
     <Button
         android:id="@+id/btnToggleCamera"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_gravity="bottom|center"
-        android:layout_marginBottom="50dp"
         android:text="@string/toggle_camera"
         android:textAllCaps="false"
+        android:layout_gravity="bottom"
         android:textColor="@android:color/black" />
-
     <Button
-        android:id="@+id/btnDetectObject"
+        android:id="@+id/btnfile"
+        android:layout_weight="1"
         android:layout_width="match_parent"
         android:layout_height="48dp"
-        android:layout_gravity="bottom|center"
-        android:text="@string/detect_object"
+        android:text="Upload File"
         android:textAllCaps="false"
-        android:textColor="@android:color/black"
-        android:visibility="gone" />
+        android:layout_gravity="bottom"
+        android:textColor="@android:color/black" />
 
+    </LinearLayout>
 </FrameLayout>

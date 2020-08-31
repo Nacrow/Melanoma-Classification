@@ -9,6 +9,8 @@ android {
         versionCode 1
         versionName "1.0"
         testInstrumentationRunner "android.support.test.runner.AndroidJUnitRunner"
+        renderscriptTargetApi 27  //版本号请与compileSdkVersion保持一致
+        renderscriptSupportModeEnabled true
     }
     buildTypes {
         release {
@@ -24,11 +26,14 @@ android {
 }
 
 dependencies {
+
     implementation fileTree(dir: 'libs', include: ['*.jar'])
+    //noinspection GradleCompatible
     implementation 'com.android.support:appcompat-v7:27.1.0'
     compile 'com.wonderkiln:camerakit:0.13.1'
     compile 'org.tensorflow:tensorflow-lite:+'
     testImplementation 'junit:junit:4.12'
     androidTestImplementation 'com.android.support.test:runner:1.0.1'
     androidTestImplementation 'com.android.support.test.espresso:espresso-core:3.0.1'
+
 }
