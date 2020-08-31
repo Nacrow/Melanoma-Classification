@@ -4,4 +4,4 @@
 * [Traning Dataset](https://www.kaggle.com/andrewmvd/isic-2019)is from kaggle including 8 types of skin lesion. 
 * This project is based on [Android TensorFlow Lite Machine Learning Example](https://github.com/amitshekhariitbhu/Android-TensorFlow-Lite-Example). 
 
-![image](https://github.com/Nacrow/Melanoma-Classification/master/assets/demo2.jpg)
+![image](https://github.com/Nacrow/Melanoma-Classification/assets/demo2.jpg)
